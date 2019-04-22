@@ -1,4 +1,4 @@
-# CentOS7 + PHP7 + Apache + Nginx 环境与多站点部署
+# CentOS7 + PHP7 + Apache + Nginx 环境配置与多站点部署
 
 ## 声明 <!-- omit in toc -->
 
