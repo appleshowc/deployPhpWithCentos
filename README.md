@@ -408,9 +408,9 @@ sudo gedit /etc/httpd/conf.vhost.d/b.conf
     ServerName test.a.mccn.com
     DocumentRoot /path/to/project/b/dir
 
-    <Directory "/path/to/project/b/dir">
+    <Directory />
           Options +Includes +FollowSymLinks -Indexes
-          AllowOverride All
+          AllowOverride none
           Require all granted
           Order Deny,Allow
           Allow from All
@@ -524,9 +524,9 @@ sudo systemctl restart httpd
       ServerName test.c.apache.com
       DocumentRoot /path/to/project/c/dir
 
-      <Directory "/path/to/project/c/dir">
+      <Directory />
             Options +Includes +FollowSymLinks -Indexes
-            AllowOverride All
+            AllowOverride none
             Require all granted
             Order Deny,Allow
             Allow from All
