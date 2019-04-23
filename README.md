@@ -7,14 +7,14 @@
 ## 目录 <!-- omit in toc -->
 
 - [CentOS7 + PHP7 + Apache + Nginx 环境与多站点部署](#centos7--php7--apache--nginx-环境与多站点部署)
-  - [安装 PHP 7](#安装-php-7)
+  - [安装 PHP 7.2](#安装-php-72)
     - [1. 安装 epel](#1-安装-epel)
     - [2. 安装 php yum 仓库](#2-安装-php-yum-仓库)
-    - [3. 安装 php 7 及扩展](#3-安装-php-7-及扩展)
+    - [3. 安装 php 7.2 及扩展](#3-安装-php-72-及扩展)
     - [4. 修改 `php.ini`](#4-修改-phpini)
     - [5. 修改 `www.conf`](#5-修改-wwwconf)
     - [6. 开启服务](#6-开启服务)
-  - [安装 Nginx](#安装-nginx)
+  - [安装 Nginx 1.14](#安装-nginx-114)
     - [1. 下载安装包并解压](#1-下载安装包并解压)
     - [2. 安装 zlib pcre openssl 库](#2-安装-zlib-pcre-openssl-库)
     - [3. 配置、编译并安装](#3-配置编译并安装)
@@ -22,7 +22,7 @@
     - [5. 开放端口](#5-开放端口)
     - [6. 创建启动脚本 `nginx.service`](#6-创建启动脚本-nginxservice)
     - [7. 配置 php 支持](#7-配置-php-支持)
-  - [安装 Apache](#安装-apache)
+  - [安装 Apache 2.4](#安装-apache-24)
     - [1. 安装并启动 Apache](#1-安装并启动-apache)
     - [2. 创建 `index.php` 页面并测试](#2-创建-indexphp-页面并测试)
   - [多站点部署](#多站点部署)
@@ -47,7 +47,7 @@
   - [注意事项](#注意事项)
     - [1. `nginx.pid` 丢失导致 nginx 启动失败](#1-nginxpid-丢失导致-nginx-启动失败)
 
-## 安装 PHP 7
+## 安装 PHP 7.2
 
 ### 1. 安装 epel
 
@@ -61,7 +61,7 @@ sudo yum install epel-release
 sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 ```
 
-### 3. 安装 php 7 及扩展
+### 3. 安装 php 7.2 及扩展
 
 ```sh
 sudo yum install php72w
@@ -104,7 +104,7 @@ systemctl enable php-fpm  # 开机启动
 
 ---
 
-## 安装 Nginx
+## 安装 Nginx 1.14
 
 ### 1. 下载安装包并解压
 
@@ -234,7 +234,7 @@ systemctl enable nginx  # 开机启动
 
 ---
 
-## 安装 Apache
+## 安装 Apache 2.4
 
 ### 1. 安装并启动 Apache
 
